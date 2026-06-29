@@ -1,0 +1,97 @@
+<div class="container">
+
+    <h1 class="title">
+        Plateforme d'Évaluation IA
+    </h1>
+
+    <div class="card">
+
+        <h2>Génération de QCM</h2>
+
+        <div class="sujet-zone">
+
+            <input
+                [(ngModel)]="sujet"
+                placeholder="Exemple : Java Spring Boot">
+
+            <button (click)="genererQcm()">
+                Générer
+            </button>
+
+        </div>
+
+    </div>
+
+    <div
+        class="card question"
+        *ngFor="let q of questions; let i=index">
+
+        <h3>
+            Question {{i+1}}
+        </h3>
+
+        <p>
+            {{q.question}}
+        </p>
+
+        <label>
+            <input
+                type="radio"
+                [name]="'question'+i"
+                [value]="q.choixA"
+                (change)="choisirReponse(i,q.choixA)">
+            {{q.choixA}}
+        </label>
+
+        <br><br>
+
+        <label>
+            <input
+                type="radio"
+                [name]="'question'+i"
+                [value]="q.choixB"
+                (change)="choisirReponse(i,q.choixB)">
+            {{q.choixB}}
+        </label>
+
+        <br><br>
+
+        <label>
+            <input
+                type="radio"
+                [name]="'question'+i"
+                [value]="q.choixC"
+                (change)="choisirReponse(i,q.choixC)">
+            {{q.choixC}}
+        </label>
+
+        <br><br>
+
+        <label>
+            <input
+                type="radio"
+                [name]="'question'+i"
+                [value]="q.choixD"
+                (change)="choisirReponse(i,q.choixD)">
+            {{q.choixD}}
+        </label>
+
+    </div>
+
+    <div style="text-align:center;" *ngIf="questions.length > 0">
+
+        <button (click)="envoyer()">
+            Terminer l'évaluation
+        </button>
+
+    </div>
+
+    <div
+        class="resultat"
+        *ngIf="note !== null">
+
+        Note : {{note}} /20
+
+    </div>
+
+</div>

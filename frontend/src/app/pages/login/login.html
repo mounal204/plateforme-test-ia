@@ -1,0 +1,45 @@
+<div class="login-container">
+
+    <div class="login-card">
+
+        <h1>Plateforme d'Évaluation IA</h1>
+
+        <input
+            type="email"
+            [(ngModel)]="email"
+            placeholder="Email">
+
+        <input
+            type="password"
+            [(ngModel)]="password"
+            placeholder="Mot de passe">
+
+        <div class="roles">
+
+            <label>
+                <input
+                    type="radio"
+                    name="role"
+                    value="enseignant"
+                    [(ngModel)]="role">
+                Enseignant
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="role"
+                    value="etudiant"
+                    [(ngModel)]="role">
+                Étudiant
+            </label>
+
+        </div>
+
+        <button (click)="connecter()">
+            Se connecter
+        </button>
+
+    </div>
+
+</div>

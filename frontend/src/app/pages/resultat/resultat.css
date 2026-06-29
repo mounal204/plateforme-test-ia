@@ -1,0 +1,26 @@
+.resultat-container{
+
+    width:80%;
+    margin:auto;
+    padding:20px;
+
+}
+
+h1{
+
+    text-align:center;
+
+}
+
+h2{
+
+    text-align:center;
+
+}
+
+button{
+
+    padding:10px 20px;
+    cursor:pointer;
+
+}

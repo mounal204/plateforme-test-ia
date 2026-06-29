@@ -1,0 +1,45 @@
+<div class="dashboard">
+
+  <h1>Tableau de Bord Enseignant</h1>
+
+  <div class="card">
+
+    <h2>Génération d'une évaluation</h2>
+
+    <input
+      type="text"
+      [(ngModel)]="sujet"
+      placeholder="Entrer un sujet">
+
+    <button (click)="genererQcm()">
+      Générer QCM
+    </button>
+
+  </div>
+
+  <div *ngIf="questions.length > 0">
+
+    <h2>Questions générées</h2>
+
+    <div *ngFor="let q of questions; let i=index">
+
+      <h3>{{i+1}} - {{q.question}}</h3>
+
+      <ul>
+        <li>{{q.choixA}}</li>
+        <li>{{q.choixB}}</li>
+        <li>{{q.choixC}}</li>
+        <li>{{q.choixD}}</li>
+      </ul>
+
+      <hr>
+
+    </div>
+    <!-- Bouton pour ouvrir l'évaluation -->
+    <button (click)="ouvrirEvaluation()">
+      Ouvrir l'évaluation
+    </button>
+
+  </div>
+
+</div>

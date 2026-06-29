@@ -1,0 +1,39 @@
+<div class="resultat-container">
+
+    <h1>Résultat de l'évaluation</h1>
+
+    <h2>Note : {{note}} / 20</h2>
+
+    <h2>{{mention}}</h2>
+
+    <hr>
+
+    <div *ngFor="let q of questions; let i=index">
+
+        <h3>
+            Question {{i+1}}
+        </h3>
+
+        <p>
+            <strong>{{q.question}}</strong>
+        </p>
+
+        <p>
+            Votre réponse :
+            {{reponses[i]}}
+        </p>
+
+        <p>
+            Bonne réponse :
+            {{q.bonneReponse}}
+        </p>
+
+        <hr>
+
+    </div>
+
+    <button (click)="retourConnexion()">
+        Retour à la connexion
+    </button>
+
+</div>

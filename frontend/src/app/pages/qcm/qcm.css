@@ -1,0 +1,66 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.card{
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.title{
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 25px;
+}
+
+.sujet-zone{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.sujet-zone input{
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+}
+
+button:hover{
+    opacity: 0.9;
+}
+
+.question{
+    margin-top: 15px;
+}
+
+.question h3{
+    color: #333;
+}
+
+.resultat{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 24px;
+    color: green;
+    font-weight: bold;
+}
